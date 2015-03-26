@@ -1,3 +1,7 @@
+" Installing Vundle
+" git clone git@github.com:gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"
+"
 " Vundle Settings
 set nocompatible
 filetype off
