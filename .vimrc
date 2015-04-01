@@ -38,6 +38,8 @@ nmap <Leader>t :NERDTreeToggle<CR>
 Plugin 'bling/vim-airline'
 set laststatus=2
 
+Plugin 'elzr/vim-json'
+
 call vundle#end()
 filetype plugin indent on
 
