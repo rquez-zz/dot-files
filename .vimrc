@@ -55,6 +55,11 @@ set expandtab
 set wildmenu
 set lazyredraw
 set showmatch
+set nowrap
+set autoindent
+set visualbell
+set noerrorbells
+set pastetoggle=<F2>
 if version >= 703
         set colorcolumn=80
 endif
