@@ -1,7 +1,6 @@
 " Installing Vundle
 " git clone git@github.com:gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-"
-"
+
 " Vundle Settings
 set nocompatible
 filetype off
@@ -9,7 +8,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 " Vundle Plugins
 call vundle#begin()
-
 Plugin 'gmarik/Vundle.vim'
 
 " Git Wrapper
@@ -32,12 +30,15 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['jshint']
 
+" NerdTree
 Plugin 'scrooloose/nerdtree'
 nmap <Leader>t :NERDTreeToggle<CR>
 
+" Airline - Vim Status Bar
 Plugin 'bling/vim-airline'
 set laststatus=2
 
+" JSON Checking
 Plugin 'elzr/vim-json'
 
 call vundle#end()

@@ -1,6 +1,3 @@
-# Start ssh-agent at login
-source ~/.ssh-agent.sh
-
 # Start Color Git Prompt
 source ~/.git-prompt.sh
 
