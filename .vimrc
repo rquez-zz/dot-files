@@ -20,7 +20,7 @@ let g:YUNOcommit_after = 15
 " Auto closes brackets, paraenthesis, and such.
 Plugin 'Raimondi/delimitMate'
 
-" Syntax checking 
+" Syntax checking
 Plugin 'scrooloose/syntastic'
 set statusline+=%#warningmsg#
 set statusline+=%{ntasticStatuslineFlag()}
@@ -65,7 +65,9 @@ if version >= 703
         set colorcolumn=80
 endif
 
-" Syntax Coloring for SASS
+match ErrorMsg '\s\+$'
+
+" Syntar Coloring for SASS
 autocmd BufNewFile,BufRead *.scss set syntax=css
 
 " Snytax Coloring for EJS

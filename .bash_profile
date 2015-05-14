@@ -1,6 +1,9 @@
 # Start Color Git Prompt
 source ~/.git-prompt.sh
 
+# Star Git Completion
+source ~/.git-completion.bash
+
 # Reset
 Color_Off="\[\033[0m\]"       # Text Reset
 
