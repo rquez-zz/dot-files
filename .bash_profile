@@ -86,22 +86,22 @@ NewLine="\n"
 Jobs="\j"
 
 # Set colors when changes have been made in repository
-export PS1=$IBlack$Time12h$Color_Off'$(git branch &>/dev/null;\
+export PS1=$BCyan$Time12h$BPurple' Jobs: '$Jobs$Color_Off'$(git branch &>/dev/null;\
 if [ $? -eq 0 ]; then \
   echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
   if [ "$?" -eq "0" ]; then \
     # @4 - Clean repository - nothing to commit
-    echo "'$Green'"$(__git_ps1 " (%s)"); \
+    echo "'$BBlue'"$(__git_ps1 " (%s)"); \
   else \
     # @5 - Changes to working tree
-    echo "'$Red'"$(__git_ps1 " {%s}"); \
-  fi) '$BYellow$PathShort$Color_Off'\$ "; \
+    echo "'$BRed'"$(__git_ps1 " {%s}"); \
+  fi) '$BBlue$PathShort$Color_Off'\$ "; \
 else \
   # @2 - Prompt when not in GIT repo
-  echo " '$BBlue$PathShort$Color_Off'\$ "; \
+  echo " '$BCyan$PathShort$Color_Off'\$ "; \
 fi)'
 
 # Set colors for ls commmand
 alias ls='ls --color'
-LS_COLORS='di=32:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
+LS_COLORS='di=36:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
 export LS_COLORS
