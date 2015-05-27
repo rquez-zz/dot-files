@@ -37,14 +37,20 @@ nmap <Leader>t :NERDTreeToggle<CR>
 " Airline - Vim Status Bar
 Plugin 'bling/vim-airline'
 set laststatus=2
+let g:airline_theme='luna'
+let g:airline#extensions#syntastic#enabled = 1
 
 " JSON Checking
 Plugin 'elzr/vim-json'
+
+" Solarized Colors
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on
 
 " Vim Settings
+set nocp
 syntax on
 set background=dark
 set number
@@ -72,3 +78,6 @@ autocmd BufNewFile,BufRead *.scss set syntax=css
 
 " Snytax Coloring for EJS
 autocmd BufNewFile,BufRead *.ejs set syntax=html
+
+let g:solarized_termcolors=255
+colorscheme solarized
