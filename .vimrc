@@ -43,9 +43,6 @@ let g:airline#extensions#syntastic#enabled = 1
 " JSON Checking
 Plugin 'elzr/vim-json'
 
-" Solarized Colors
-Plugin 'altercation/vim-colors-solarized'
-
 call vundle#end()
 filetype plugin indent on
 
@@ -78,6 +75,3 @@ autocmd BufNewFile,BufRead *.scss set syntax=css
 
 " Snytax Coloring for EJS
 autocmd BufNewFile,BufRead *.ejs set syntax=html
-
-let g:solarized_termcolors=255
-colorscheme solarized
