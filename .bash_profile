@@ -1,3 +1,5 @@
+[ -f "~/.profile" ] && source ~/.profile
+
 # Start Color Git Prompt
 source ~/.git-prompt.sh
 
