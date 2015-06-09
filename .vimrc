@@ -47,6 +47,8 @@ call vundle#end()
 filetype plugin indent on
 
 " Vim Settings
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 set nocp
 syntax on
 set background=dark
