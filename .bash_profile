@@ -88,7 +88,7 @@ NewLine="\n"
 Jobs="\j"
 
 # Set colors when changes have been made in repository
-export PS1=$BCyan$Time12h$BPurple' Jobs: '$Jobs$Color_Off'$(git branch &>/dev/null;\
+export PS1=$BCyan$Time12h$Color_Off'$(git branch &>/dev/null;\
 if [ $? -eq 0 ]; then \
   echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
   if [ "$?" -eq "0" ]; then \
