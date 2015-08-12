@@ -7,3 +7,4 @@
 	name = Ricardo Vasquez
 [core]
 	excludesfile = /home/vagrant/.gitignore_global
+	editor = vim
