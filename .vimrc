@@ -77,3 +77,6 @@ autocmd BufNewFile,BufRead *.scss set syntax=css
 
 " Snytax Coloring for EJS
 autocmd BufNewFile,BufRead *.ejs set syntax=html
+
+" Spell check git commits
+autocmd Filetype gitcommit setlocal spell textwidth=72
