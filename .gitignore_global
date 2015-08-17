@@ -36,3 +36,10 @@
 ehthumbs.db
 Icon?
 Thumbs.db
+
+# IDE Files #
+#####################
+.project
+.classpath
+*.iml
+.idea/
