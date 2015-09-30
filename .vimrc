@@ -13,10 +13,6 @@ Plugin 'gmarik/Vundle.vim'
 " Git Wrapper
 Plugin 'tpope/vim-fugitive'
 
-" Git Commit Reminder after 15 writes
-Plugin 'esneider/YUNOcommit.vim'
-let g:YUNOcommit_after = 15
-
 " Auto closes brackets, paraenthesis, and such.
 Plugin 'Raimondi/delimitMate'
 
@@ -35,23 +31,25 @@ Plugin 'scrooloose/nerdtree'
 nmap <Leader>t :NERDTreeToggle<CR>
 
 " Airline - Vim Status Bar
+" Powerline fonts are needed if the fonts look strange
 Plugin 'bling/vim-airline'
 set laststatus=2
-let g:airline_theme='luna'
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_theme='tomorrow'
 let g:airline#extensions#syntastic#enabled = 1
-
-" JSON Checking
-Plugin 'elzr/vim-json'
 
 call vundle#end()
 filetype plugin indent on
 
 " Vim Settings
+set t_Co=256
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 set nocp
 syntax on
-set background=dark
 set number
 set shiftwidth=4
 set tabstop=4
@@ -80,3 +78,7 @@ autocmd BufNewFile,BufRead *.ejs set syntax=html
 
 " Spell check git commits
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
+" Get colors here http://www.vim.org/scripts/download_script.php?src_id=18915
+" Unzip to .vim/
+colors wombat256mod
