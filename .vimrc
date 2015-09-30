@@ -1,5 +1,4 @@
-" Installing Vundle
-" git clone git@github.com:gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" run .vim_setup to install fonts, colorschemes and vundle
 
 " Vundle Settings
 set nocompatible
@@ -31,7 +30,6 @@ Plugin 'scrooloose/nerdtree'
 nmap <Leader>t :NERDTreeToggle<CR>
 
 " Airline - Vim Status Bar
-" Powerline fonts are needed if the fonts look strange
 Plugin 'bling/vim-airline'
 set laststatus=2
 let g:airline_powerline_fonts = 1
@@ -79,6 +77,4 @@ autocmd BufNewFile,BufRead *.ejs set syntax=html
 " Spell check git commits
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
-" Get colors here http://www.vim.org/scripts/download_script.php?src_id=18915
-" Unzip to .vim/
 colors wombat256mod
