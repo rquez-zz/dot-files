@@ -20,6 +20,9 @@ Plugin 'tpope/vim-fugitive'
 " Auto closes brackets, paraenthesis, and such.
 Plugin 'Raimondi/delimitMate'
 
+" Docker syntax
+Plugin 'ekalinin/Dockerfile.vim'
+
 " Syntax checking
 Plugin 'scrooloose/syntastic'
 set statusline+=%#warningmsg#
