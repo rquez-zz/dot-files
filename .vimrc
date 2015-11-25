@@ -62,6 +62,7 @@ set tabstop=4
 set softtabstop=4
 set hidden
 set expandtab
+set smartindent
 set wildmenu
 set lazyredraw
 set showmatch
