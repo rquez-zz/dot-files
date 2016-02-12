@@ -38,7 +38,8 @@ Plugin 'scrooloose/nerdtree'
 nmap <Leader>t :NERDTreeToggle<CR>
 
 " Airline - Vim Status Bar
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 set laststatus=2
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
