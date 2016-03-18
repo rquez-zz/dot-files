@@ -1,5 +1,3 @@
-" run .vim_setup to install fonts, colorschemes and vundle
-
 " Vundle Settings
 set nocompatible
 filetype off
@@ -7,10 +5,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 " Vundle Plugins
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+
+Plugin 'VundleVim/Vundle.vim'
 
 " Markdown syntax
-Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled=1
 
@@ -48,15 +46,18 @@ endif
 let g:airline_theme='tomorrow'
 let g:airline#extensions#syntastic#enabled = 1
 
+" Ansible Syntax
+Plugin 'chase/vim-ansible-yaml'
+
 call vundle#end()
-filetype plugin indent on
 
 " Vim Settings
-set t_Co=256
+filetype plugin indent on
 filetype plugin on
+syntax on
+set t_Co=256
 set omnifunc=syntaxcomplete#Complete
 set nocp
-syntax on
 set number
 set shiftwidth=4
 set tabstop=4
@@ -77,12 +78,6 @@ if version >= 703
 endif
 
 match ErrorMsg '\s\+$'
-
-" Syntar Coloring for SASS
-autocmd BufNewFile,BufRead *.scss set syntax=css
-
-" Snytax Coloring for EJS
-autocmd BufNewFile,BufRead *.ejs set syntax=html
 
 " Spell check git commits
 autocmd Filetype gitcommit setlocal spell textwidth=72
