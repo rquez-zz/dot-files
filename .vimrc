@@ -6,48 +6,53 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " Vundle Plugins
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
+    Plugin 'VundleVim/Vundle.vim'
 
-" Markdown syntax
-Plugin 'plasticboy/vim-markdown'
-let g:vim_markdown_folding_disabled=1
+    " Markdown syntax
+    Plugin 'plasticboy/vim-markdown'
+    let g:vim_markdown_folding_disabled=1
 
-" Git Wrapper
-Plugin 'tpope/vim-fugitive'
+    " Git Wrapper
+    Plugin 'tpope/vim-fugitive'
 
-" Auto closes brackets, paraenthesis, and such.
-Plugin 'Raimondi/delimitMate'
+    " Auto closes brackets, paraenthesis, and such.
+    Plugin 'Raimondi/delimitMate'
 
-" Docker syntax
-Plugin 'ekalinin/Dockerfile.vim'
+    " Docker syntax
+    Plugin 'ekalinin/Dockerfile.vim'
 
-" Syntax checking
-Plugin 'scrooloose/syntastic'
-set statusline+=%#warningmsg#
-set statusline+=%{ntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['jshint']
+    " Syntax checking
+    Plugin 'scrooloose/syntastic'
+    set statusline+=%#warningmsg#
+    set statusline+=%{ntasticStatuslineFlag()}
+    set statusline+=%*
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_wq = 0
+    let g:syntastic_javascript_checkers = ['jshint']
 
-" NerdTree
-Plugin 'scrooloose/nerdtree'
-nmap <Leader>t :NERDTreeToggle<CR>
+    " NerdTree
+    Plugin 'scrooloose/nerdtree'
+    nmap <Leader>t :NERDTreeToggle<CR>
 
-" Airline - Vim Status Bar
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-set laststatus=2
-let g:airline_powerline_fonts = 1
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_theme='tomorrow'
-let g:airline#extensions#syntastic#enabled = 1
+    " Airline - Vim Status Bar
+    Plugin 'vim-airline/vim-airline'
+    Plugin 'vim-airline/vim-airline-themes'
+    set laststatus=2
+    let g:airline_powerline_fonts = 1
+    if !exists('g:airline_symbols')
+      let g:airline_symbols = {}
+    endif
+    let g:airline_theme='tomorrow'
+    let g:airline#extensions#syntastic#enabled = 1
 
-" Ansible Syntax
-Plugin 'chase/vim-ansible-yaml'
+    " Ansible Syntax
+    Plugin 'chase/vim-ansible-yaml'
+
+    " Install Plugins if not installed
+    if system('ls -l ~/.vim/bundle | grep -c ^d') < 10
+        :PluginInstall
+    endif
 
 call vundle#end()
 
