@@ -39,18 +39,21 @@ call vundle#begin()
     Plugin 'vim-airline/vim-airline'
     Plugin 'vim-airline/vim-airline-themes'
     set laststatus=2
-    let g:airline_powerline_fonts = 1
-    if !exists('g:airline_symbols')
-      let g:airline_symbols = {}
-    endif
-    let g:airline_theme='tomorrow'
+    " let g:airline_powerline_fonts = 1
+    " if !exists('g:airline_symbols')
+    "   let g:airline_symbols = {}
+    " endif
+    let g:airline_theme='luna'
     let g:airline#extensions#syntastic#enabled = 1
 
     " Ansible Syntax
     Plugin 'chase/vim-ansible-yaml'
 
+    " Vim Color Schemes
+    Plugin 'flazz/vim-colorschemes'
+
     " Install Plugins if not installed
-    if system('ls -l ~/.vim/bundle | grep -c ^d') < 10
+    if system('ls -l ~/.vim/bundle | grep -c ^d') < 11
         :PluginInstall
     endif
 
@@ -87,4 +90,4 @@ match ErrorMsg '\s\+$'
 " Spell check git commits
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
-colors wombat256mod
+colorscheme PaperColor
