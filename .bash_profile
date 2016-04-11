@@ -93,14 +93,14 @@ if [ $? -eq 0 ]; then \
   echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
   if [ "$?" -eq "0" ]; then \
     # @4 - Clean repository - nothing to commit
-    echo "'$BBlue'"$(__git_ps1 " (%s)"); \
+    echo "'$BIBlue'"$(__git_ps1 " (%s)"); \
   else \
     # @5 - Changes to working tree
-    echo "'$BRed'"$(__git_ps1 " {%s}"); \
-  fi) '$BBlue$PathShort$Color_Off'\$ "; \
+    echo "'$BIRed'"$(__git_ps1 " {%s}"); \
+  fi) '$BIBlue$PathShort$Color_Off'\$ "; \
 else \
   # @2 - Prompt when not in GIT repo
-  echo " '$BCyan$PathShort$Color_Off'\$ "; \
+  echo " '$BICyan$PathShort$Color_Off'\$ "; \
 fi)'
 
 # Set colors for ls commmand
