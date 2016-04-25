@@ -1,1 +1,8 @@
 *
+!.bash_profile
+!.git-completion.bash
+!.git-prompt.sh
+!.gitconfig
+!.gitignore_global
+!.tmux.conf
+!.vimrc
