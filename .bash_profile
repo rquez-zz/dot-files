@@ -107,3 +107,5 @@ fi)'
 alias ls='ls --color'
 LS_COLORS='di=36:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
 export LS_COLORS
+
+eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa
