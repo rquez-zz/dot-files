@@ -87,25 +87,31 @@ PathFull="\W"
 NewLine="\n"
 Jobs="\j"
 
-# Set colors when changes have been made in repository
-export PS1=$BCyan$Time12h$Color_Off'$(git branch &>/dev/null;\
-if [ $? -eq 0 ]; then \
-  echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
-  if [ "$?" -eq "0" ]; then \
-    # @4 - Clean repository - nothing to commit
-    echo "'$BIBlue'"$(__git_ps1 " (%s)"); \
-  else \
-    # @5 - Changes to working tree
-    echo "'$BIRed'"$(__git_ps1 " {%s}"); \
-  fi) '$BIBlue$PathShort$Color_Off'\$ "; \
-else \
-  # @2 - Prompt when not in GIT repo
-  echo " '$BICyan$PathShort$Color_Off'\$ "; \
-fi)'
+# Only modify PS1 in Linux environment
+if ["$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
-# Set colors for ls commmand
-alias ls='ls --color'
-LS_COLORS='di=36:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
-export LS_COLORS
+    # Set colors when changes have been made in repository
+    export PS1=$BCyan$Time12h$Color_Off'$(git branch &>/dev/null;\
+    if [ $? -eq 0 ]; then \
+      echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
+      if [ "$?" -eq "0" ]; then \
+        # @4 - Clean repository - nothing to commit
+        echo "'$BIBlue'"$(__git_ps1 " (%s)"); \
+      else \
+        # @5 - Changes to working tree
+        echo "'$BIRed'"$(__git_ps1 " {%s}"); \
+      fi) '$BIBlue$PathShort$Color_Off'\$ "; \
+    else \
+      # @2 - Prompt when not in GIT repo
+      echo " '$BICyan$PathShort$Color_Off'\$ "; \
+    fi)'
 
+    # Set colors for ls commmand
+    alias ls='ls --color'
+    LS_COLORS='di=36:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
+    export LS_COLORS
+
+fi
+
+# Start SSH Agent
 eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa
