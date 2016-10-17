@@ -52,6 +52,9 @@ call vundle#begin()
     " Vim Color Schemes
     Plugin 'flazz/vim-colorschemes'
 
+    " Handlebars and mustache syntax
+    Plugin 'mustache/vim-mustache-handlebars'
+
     " Install Plugins if not installed
     if system('ls -l ~/.vim/bundle | grep -c ^d') < 11
         :PluginInstall
