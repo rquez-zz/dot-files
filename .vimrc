@@ -55,8 +55,11 @@ call vundle#begin()
     " Handlebars and mustache syntax
     Plugin 'mustache/vim-mustache-handlebars'
 
+    " Typescript syntax
+    Plugin 'leafgarland/typescript-vim'
+
     " Install Plugins if not installed
-    if system('ls -l ~/.vim/bundle | grep -c ^d') < 11
+    if system('ls -l ~/.vim/bundle | grep -c ^d') < 12
         :PluginInstall
     endif
 
